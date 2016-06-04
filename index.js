@@ -31,7 +31,7 @@ var mods = {
 		"AR_max": 11,
 		"OD_mod": "ms300",
 		"OD_multiplier": 2/3,
-		"OD_max": 11,
+		"OD_max": getOD(13, "ms300"),
 		"BPM_multiplier": 1.5
 	},
 	"HalfTime": {
@@ -124,11 +124,11 @@ function getOD(OD, OD_type) {
 	if(OD_type == "OD")
 		return {
 			OD: OD,
-			ms300: 78 - 6 * OD
+			ms300: 79.5 - 6 * OD
 		}
 	else if(OD_type == "ms300")
 		return {
-			OD: (78 - OD) / 6,
+			OD: (79.5 - OD) / 6,
 			ms300: OD
 		}
 	else
