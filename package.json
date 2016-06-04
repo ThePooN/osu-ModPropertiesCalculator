@@ -1,12 +1,12 @@
 {
-  "name": "ofd-ar",
+  "name": "osu-ModPropertiesCalculator",
   "version": "1.0.0",
-  "description": "ofd-ar",
+  "description": "Enables you to apply mods on beatmap properties easily",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "ThePooN",
   "license": "ISC",
   "dependencies": {
     "enum": "^2.3.0"
