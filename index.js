@@ -1,5 +1,5 @@
 var Enum = require('enum');
-var modsEnum = new Enum(["Easy", "HardRock", "DoubleTime", "HalfTime"]);
+var modsEnum = new Enum({"Easy": 2, "HardRock": 16, "DoubleTime": 64, "HalfTime": 256});
 
 var mods = {
 	"Easy": {
@@ -47,12 +47,10 @@ var mods = {
 
 exports.mods = modsEnum;
 
-exports.calcProperties = function (properties, appliedMods) {
-	if(appliedMods == null)
+exports.calcProperties = function (properties, modsValue) {
+	var appliedMods = modsEnum.get(modsValue);
+	if(!appliedMods)
 		return properties;
-
-	if(typeof appliedMods == "number")
-		appliedMods = modsEnum.get(appliedMods);
 
 	var AR = null;
 	var OD = null;
